@@ -187,17 +187,17 @@ if __name__ == '__main__':
                 'Address', 
                 'Zipcode']
 
-    if process_csvs(f, o, schema):
-        #print the output file to 
-        print('FINAL OUTPUT FILE: TOP 15 ROWS\n')
-        with open(o, 'r') as f:
-            csv_r = csv.reader(f)
+    process_csvs(f, o, schema)
+    #print the output file to 
+    print('FINAL OUTPUT FILE: TOP 15 ROWS\n')
+    with open(o, 'r') as f:
+        csv_r = csv.reader(f)
 
-            for i, line in enumerate(csv_r):
-                if i > 15:
-                    break
-                else:
-                    print(line)
+        for i, line in enumerate(csv_r):
+            if i > 15:
+                break
+            else:
+                print(line)
 
 
         
